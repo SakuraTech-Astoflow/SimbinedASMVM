@@ -4,8 +4,16 @@ int main() {
     VMState state;
     state.registers.resize(16, 0); // 初始化16个寄存器
     state.memory = {
-      LOAD, 5,
-      ADD, 1, SUB, 1, JE, 3}; // 示例字节码
+      LOAD,
+      5,
+      ADD,
+      1,
+      SUB,
+      1,
+      JE,3,
+
+      
+      }; // 示例字节码
 
     execute(state);
 

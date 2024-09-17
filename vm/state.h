@@ -5,6 +5,7 @@ enum Opcode {
   JMP = 0x03,
   JE = 0x04,
   JNE = 0x05,
+  MOV = 0x06,
   INT = 0xff
 };
 

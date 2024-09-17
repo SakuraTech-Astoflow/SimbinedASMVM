@@ -42,6 +42,23 @@ void execute(VMState &state) {
           state.ip = offset;
       }
       break;
+    case INT:
+      break;
+    case MOV:
+      if (state.ip + 1 < state.memory.size()) {
+        int32_t srcReg = state.memory[state.ip++];
+        int32_t dstReg = state.memory[state.ip++];
+        if (srcReg >= state.registers.size() ||
+            dstReg >= state.registers.size()) {
+          std::cerr << "MOV: 寄存器索引超出范围" << std::endl;
+          return;
+        }
+        state.registers[dstReg] = state.registers[srcReg];
+      } else {
+        std::cerr << "MOV: 不足的参数" << std::endl;
+        return;
+      }
+      break;
     default:
       std::cout << "Unknown opcode" << std::endl;
       return;
