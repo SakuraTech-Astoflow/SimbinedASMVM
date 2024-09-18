@@ -19,7 +19,7 @@ int main() {
   vm.execute();
 
   // 打印寄存器的值
- // vm.printRegisters();
+  vm.printRegisters();
 
   return 0;
 }

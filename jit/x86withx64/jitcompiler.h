@@ -46,11 +46,11 @@ public:
     }
   }
 
-  /*void printRegisters() const {
+  void printRegisters() const {
     for (size_t i = 0; i < state.registers.size(); ++i) {
       std::cout << "Register " << i << ": " << state.registers[i] << std::endl;
     }
-  }*/
+  }
 
 private:
   ASMRunnerTrafficLight &state;
