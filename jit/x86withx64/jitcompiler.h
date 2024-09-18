@@ -38,7 +38,7 @@ public:
         intHandler();
         break;
       default:
-        std::cerr << "Unknown opcode: " << static_cast<int>(instr.opcode)
+        std::cerr << "Unknown controller: " << static_cast<int>(instr.opcode)
                   << std::endl;
         break;
       }
@@ -89,8 +89,5 @@ private:
     state.registers[reg1] = state.registers[reg2];
   }
 
-  void intHandler() {
-    // 处理中断
-  }
 };
 
