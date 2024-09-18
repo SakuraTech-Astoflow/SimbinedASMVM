@@ -38,7 +38,7 @@ public:
         intHandler();
         break;
       default:
-        std::cerr << "Unknown opcode: " << static_cast<int>(instr.opcode)
+        std::cerr << "Unknown Controller: " << static_cast<int>(instr.opcode)
                   << std::endl;
         break;
       }
@@ -90,7 +90,7 @@ private:
   }
 
   void intHandler() {
-    // 处理中断
+    return;
   }
 };
 
