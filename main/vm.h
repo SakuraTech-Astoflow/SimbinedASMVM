@@ -42,7 +42,7 @@ void execute(VMState &state) {
           state.ip = offset;
       }
       break;
-    case INT:
+    case intrruput:
       break;
     case MOV:
       if (state.ip + 1 < state.memory.size()) {

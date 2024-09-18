@@ -1,4 +1,4 @@
-#include "../vm/vm.h"
+#include "../main/vm.h"
 
 int main() {
     VMState state;
