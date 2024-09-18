@@ -1,3 +1,7 @@
+#include <cstdint>
+#include <iostream>
+#include <vector>
+
 enum Opcode {
   LOAD = 0x00,
   ADD = 0x01,
@@ -9,12 +13,13 @@ enum Opcode {
   INT = 0x21
 };
 
-#include <cstdint>
-#include <iostream>
-#include <vector>
+struct Instruction {
+  Opcode opcode;
+  int32_t arg1;
+  int32_t arg2;
+};
 
-struct VMState {
-  std::vector<uint8_t> memory;    // 存储字节码
+struct ASMRunnerTrafficLight {
   std::vector<int32_t> registers; // 寄存器
   size_t ip = 0;                  // 指令指针
 };
